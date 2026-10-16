@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap');
+
+:root {
+  --bg-dark: #0a0b0d;
+  --bg-card: #121418;
+  --gold-primary: #c5a059;
+  --gold-light: #e6ca65;
+  --gold-dark: #8c6d37;
+  --text-muted: #a0a5ad;
+  --border-gold: rgba(197, 160, 89, 0.25);
+  --border-gold-strong: rgba(197, 160, 89, 0.6);
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-dark);
+  color: #f4f4f5;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.old-money-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  box-sizing: border-box;
+  background: radial-gradient(circle at center, #14171d 0%, #0a0b0d 100%);
+}
+
+.app-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand-subtitle {
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  color: var(--gold-primary);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.app-title {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 2.5rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em;
+  margin: 0 !important;
+  color: var(--gold-primary);
+  text-shadow: 0 0 20px rgba(197, 160, 89, 0.15);
+}
+
+.gold-divider {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+  margin-top: 1.25rem;
+}
+
+.app-content {
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-text {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-style: italic;
+  font-size: 1.25rem !important;
+  /* Passage d'un gris trop sombre (#a0a5ad) à un laiton doux très lisible */
+  color: #d1c7b7 !important; 
+  text-align: center;
+  margin-bottom: 2rem !important;
+  letter-spacing: 0.02em;
+}
+
+/* Frame Old Money style boîte d'horlogerie / coffre */
+.panel-frame {
+  width: 100%;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--border-gold-strong), transparent, var(--border-gold));
+  border-radius: 4px;
+}
+
+.panel-inner {
+  background: var(--bg-card);
+  padding: 2.5rem 2rem;
+  border-radius: 3px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.panel-label {
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-card);
+  padding: 0 12px;
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  color: var(--gold-primary);
+  border: 1px solid var(--border-gold);
+}
+
+.app-footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.footer-status {
+  font-size: 0.7rem !important;
+  letter-spacing: 0.25em;
+  color: rgba(197, 160, 89, 0.6) !important; 
+  text-transform: uppercase;
+}

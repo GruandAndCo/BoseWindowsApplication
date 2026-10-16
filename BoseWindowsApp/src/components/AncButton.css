@@ -1,0 +1,39 @@
+/* Intégration dans AncButton */
+.anc-button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.anc-btn {
+  background: transparent;
+  border: 1px solid var(--border-gold);
+  color: #e4e4e7;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.9rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.anc-btn:hover:not(:disabled) {
+  border-color: var(--gold-primary);
+  color: var(--gold-light);
+  box-shadow: 0 0 15px rgba(197, 160, 89, 0.15);
+  background: rgba(197, 160, 89, 0.03);
+}
+
+.anc-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.anc-btn.active {
+  border-color: var(--gold-primary);
+  background: linear-gradient(135deg, rgba(197, 160, 89, 0.12), rgba(197, 160, 89, 0.02));
+  color: var(--gold-primary);
+  font-weight: 500;
+}
