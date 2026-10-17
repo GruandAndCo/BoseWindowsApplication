@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Dégradé or luxe -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E6CA65" />
+      <stop offset="50%" stop-color="#C5A059" />
+      <stop offset="100%" stop-color="#8C6D37" />
+    </linearGradient>
+
+    <!-- Ombre interne portée -->
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Fond sombre ébène -->
+  <rect width="512" height="512" rx="110" fill="#0A0B0D" />
+
+  <!-- Cadre interne laiton -->
+  <rect x="32" y="32" width="448" height="448" rx="88" fill="none" stroke="url(#goldGrad)" stroke-width="4" opacity="0.35" />
+  <rect x="48" y="48" width="416" height="416" rx="72" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.15" />
+
+  <!-- Repères cadran (horlogerie) -->
+  <circle cx="256" cy="72" r="3" fill="#C5A059" opacity="0.6" />
+  <circle cx="256" cy="440" r="3" fill="#C5A059" opacity="0.6" />
+  <circle cx="72" cy="256" r="3" fill="#C5A059" opacity="0.6" />
+  <circle cx="440" cy="256" r="3" fill="#C5A059" opacity="0.6" />
+
+  <!-- Symbole central : Onde acoustique / Diapason géométrique -->
+  <g filter="url(#goldGlow)">
+    <!-- Arc supérieur -->
+    <path d="M160 210 C160 140, 352 140, 352 210" fill="none" stroke="url(#goldGrad)" stroke-width="12" stroke-linecap="round" />
+
+    <!-- Barres d'atténuation/fréquence centrales -->
+    <line x1="192" y1="210" x2="192" y2="310" stroke="url(#goldGrad)" stroke-width="10" stroke-linecap="round" />
+    <line x1="256" y1="180" x2="256" y2="340" stroke="url(#goldGrad)" stroke-width="12" stroke-linecap="round" />
+    <line x1="320" y1="210" x2="320" y2="310" stroke="url(#goldGrad)" stroke-width="10" stroke-linecap="round" />
+
+    <!-- Témoin d'activation losange (signature) -->
+    <polygon points="256,370 264,382 256,394 248,382" fill="url(#goldGrad)" />
+  </g>
+</svg>

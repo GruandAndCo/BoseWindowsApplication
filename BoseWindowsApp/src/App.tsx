@@ -1,27 +1,37 @@
+import { Heading, Text, Divider } from "@gruand-co/core";
 import AncButton from "./components/AncButton";
-import { Heading, Text } from "@gruand-co/core";
+import BatterySection from "./components/BatteryStatus";
 import "./App.css";
 
 export default function App() {
   return (
     <main id="App" className="old-money-container">
       <header className="app-header">
-        <span className="brand-subtitle">ATELIER AUDIO • BOSE SUITE</span>
-        <Heading variant="gold" className="app-title">
+        <Text variant="small" style={{ letterSpacing: "0.35em", color: "#c5a059", textTransform: "uppercase" }}>
+          ATELIER AUDIO • BOSE SUITE
+        </Text>
+
+        <Heading level={1} variant="gold" className="app-title">
           Acoustic Controller
         </Heading>
-        <div className="gold-divider" />
+
+        <Divider orientation="horizontal" ornament={true} />
       </header>
 
       <section className="app-content">
-        <Text className="welcome-text" variant="serif">
+        <Text variant="serif" className="welcome-text">
           Sélecteur d'atténuation acoustique & d'immersion
         </Text>
 
         <div className="panel-frame">
           <div className="panel-inner">
-            <span className="panel-label">RÉGLAGE ANC</span>
+            <span className="panel-label">MODULE DE CONTRÔLE</span>
+
             <AncButton />
+
+            <Divider orientation="horizontal" ornament={false} style={{ margin: "1.5rem 0" }} />
+
+            <BatterySection />
           </div>
         </div>
       </section>

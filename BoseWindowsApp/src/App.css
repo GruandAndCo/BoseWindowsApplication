@@ -122,3 +122,15 @@ body {
   color: rgba(197, 160, 89, 0.6) !important; 
   text-transform: uppercase;
 }
+/* Séparateur interne subtil entre ANC et Batterie */
+.inner-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(197, 160, 89, 0.25) 50%,
+    transparent 100%
+  );
+  margin: 1.5rem 0;
+}

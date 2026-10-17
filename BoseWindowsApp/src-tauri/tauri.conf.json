@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "bosewindowsapp",
+  "productName": "Bose Windows Application",
   "version": "0.1.0",
   "identifier": "com.maelg.bosewindowsapp",
   "build": {
@@ -12,7 +12,7 @@
   "app": {
     "windows": [
       {
-        "title": "bosewindowsapp",
+        "title": "Bose Acoustic Controller",
         "width": 800,
         "height": 600
       }
