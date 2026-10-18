@@ -34,5 +34,4 @@ git clone https://github.com/GruandAndCo/BoseWindowsApplication.git
 # Launch app
 pnpm tauri dev
 
-# Run CLI
-./target/release/bosectl.exe --mode quiet
+```
